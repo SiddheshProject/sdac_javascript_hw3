@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3</title>
+</head>
+<body>
+
+<h2>Items in Cart: <span id="countDisplay">0</span></h2>
+
+<button id="b1">Add To Cart</button>
+<button id="resetBtn">resetCart</button>
+
+<script>
+    let count = 0;
+
+    const addBtn = document.getElementById("b1");
+    const resetBtn = document.getElementById("resetBtn");
+    const display = document.getElementById("countDisplay");
+
+    // Add to Cart
+    addBtn.addEventListener("click", () => {
+        count++;
+        display.textContent = count;
+
+        alert("The number of items added to the cart are: " + count);
+    });
+
+    // Reset Button
+    resetBtn.addEventListener("click", () => {
+        count = 0;
+        display.textContent = count;
+
+        alert("Cart has been reset!");
+    });
+</script>
+
+</body>
+</html>
